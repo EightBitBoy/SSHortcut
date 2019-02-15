@@ -1,8 +1,9 @@
 import wx
+from main_frame import MainFrame
 
 def create_frame():
-    main_frame = wx.Frame(None, title="SSHortcut")
-    main_frame.Show()
+    frame = MainFrame(None, title="SSHortcut")
+    frame.Show()
 
 application = wx.App()
 create_frame()
