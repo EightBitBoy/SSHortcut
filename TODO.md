@@ -1,6 +1,7 @@
 # Todo
 
 # Links
+* https://donjayamanne.github.io/pythonVSCodeDocs/docs/troubleshooting_intellisense/
 
 # Libraries
 * http://www.paramiko.org/

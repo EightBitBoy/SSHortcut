@@ -9,6 +9,7 @@
 ## Virtual Environment
 * create environment: python -m venv sshortcut-env
 * activate environment (PowerShell): sshortcut-env/Scripts/activate.ps1
+* reload VS Code: code .
 
 ## Dependencies
 * upgrade pip: python -m pip install --upgrade pip
