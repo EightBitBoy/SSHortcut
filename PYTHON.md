@@ -3,6 +3,9 @@
 ## Current Versions
 * Python 3.6.5
 
+## Style
+* https://github.com/google/styleguide/blob/gh-pages/pyguide.md
+
 ## Virtual Environment
 * create environment: python -m venv sshortcut-env
 * activate environment (PowerShell): sshortcut-env/Scripts/activate.ps1
