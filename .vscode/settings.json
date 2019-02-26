@@ -2,7 +2,8 @@
 	"python.linting.pylintEnabled": true,
 	"python.linting.enabled": true,
 	"python.linting.pylintArgs": [
-		"--extension-pkg-whitelist=wx"
+		"--extension-pkg-whitelist=wx",
+		"--ignore=D1"
 	],
 	"python.pythonPath": "sshortcut-env\\Scripts\\python.exe"
 }
