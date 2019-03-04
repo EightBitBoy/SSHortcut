@@ -2,9 +2,7 @@ import wx
 from main_frame import MainFrame
 from tray_icon import TrayIcon
 
-def create_tray_icon(frame):
-    if not wx.adv.TaskBarIcon.IsAvailable():
-        print("The taskbar icon is not available!") #TODO Handle this.
+def create_tray_icon(frame: wx.Frame):
     TrayIcon(frame)
 
 

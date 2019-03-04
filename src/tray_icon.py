@@ -4,9 +4,13 @@ ICON_PATH = "icon_tray.png"
 ICON_TOOLTIP = "SSHortcut"
 
 class TrayIcon(wx.adv.TaskBarIcon):
-    def __init__(self, main_frame):
+    def __init__(self, main_frame: wx.Frame):
         super(TrayIcon, self).__init__()
         self.main_frame = main_frame
+
+        if not wx.adv.TaskBarIcon.IsAvailable():
+            print("The taskbar icon is not available!") #TODO Handle this.
+
         self.SetIcon(wx.Icon(ICON_PATH), ICON_TOOLTIP)
         self.Bind(wx.adv.EVT_TASKBAR_LEFT_DOWN, self.on_left_click)
         #icon = wx.adv.TaskBarIcon()
