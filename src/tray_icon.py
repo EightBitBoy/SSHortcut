@@ -1,6 +1,6 @@
 import wx
 
-ICON_PATH = "icon_tray.png"
+ICON_PATH = "assets/icon_tray.png" #TODO Read about systemindependent file paths
 ICON_TOOLTIP = "SSHortcut"
 
 class TrayIcon(wx.adv.TaskBarIcon):
@@ -21,5 +21,27 @@ class TrayIcon(wx.adv.TaskBarIcon):
         #print(setIconSuccessful) #TODO Do something with this.
         #print(icon.IsIconInstalled()) #TODO Do something with this.
 
+    def add_menu_item(self, menu, label, function):
+        item = wx.MenuItem(menu, -1, label)
+        menu.Bind(wx.EVT_MENU, function, id = item.GetId())
+        menu.Append(item)
+        return item
+
+    def CreatePopupMenu(self):
+        menu = wx.Menu()
+        self.add_menu_item(menu, 'Action', self.on_action)
+        menu.AppendSeparator()
+        self.add_menu_item(menu, 'Exit', self.on_exit)
+        return menu
+
     def on_left_click(self, event):
         print("left click")
+
+    def on_action(self, event):
+        print("action")
+
+    #TODO Find you if existing the application this way is correct.
+    #TODO Probably should handle exit in main frame.
+    def on_exit(self, event):
+        wx.CallAfter(self.Destroy)
+        self.main_frame.Close()
