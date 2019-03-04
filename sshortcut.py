@@ -1,25 +1,22 @@
 import wx
 from main_frame import MainFrame
+from tray_icon import TrayIcon
 
-def create_icon():
+def create_tray_icon(frame):
     if not wx.adv.TaskBarIcon.IsAvailable():
         print("The taskbar icon is not available!") #TODO Handle this.
-    #icon = wx.adv.TaskBarIcon()
-    #graphics = wx.Icon("icon_tray.png")
-    #loadSuccessful = graphics.LoadFile("icon_tray.png", type=wx.BITMAP_TYPE_PNG)
-    #print(loadSuccessful) #TODO Do something with this.
-    #setIconSuccessful = icon.SetIcon(graphics, "SSHortcut")
-    #print(setIconSuccessful) #TODO Do something with this.
-    #print(icon.IsIconInstalled()) #TODO Do something with this.
+    TrayIcon(frame)
+
 
 def create_frame():
     frame = MainFrame(None, title="SSHortcut")
     frame.Show()
+    return frame
 
 def initialize():
     application = wx.App()
-    create_frame()
-    create_icon()
+    frame = create_frame()
+    create_tray_icon(frame)
     application.MainLoop()
 
 if __name__ == '__main__':
