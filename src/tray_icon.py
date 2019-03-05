@@ -12,7 +12,7 @@ class TrayIcon(wx.adv.TaskBarIcon):
             print("The taskbar icon is not available!") #TODO Handle this.
 
         self.SetIcon(wx.Icon(ICON_PATH), ICON_TOOLTIP)
-        self.Bind(wx.adv.EVT_TASKBAR_LEFT_DOWN, self.on_left_click)
+        self.Bind(wx.adv.EVT_TASKBAR_LEFT_DCLICK, self.on_left_click)
         #icon = wx.adv.TaskBarIcon()
         #graphics = wx.Icon("icon_tray.png")
         #loadSuccessful = graphics.LoadFile("icon_tray.png", type=wx.BITMAP_TYPE_PNG)
