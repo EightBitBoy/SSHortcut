@@ -6,10 +6,13 @@
 ## Style
 * https://github.com/google/styleguide/blob/gh-pages/pyguide.md
 
-## Virtual Environment
+## Virtual Environment Windows
 * create environment: python -m venv sshortcut-env
 * activate environment (PowerShell): sshortcut-env/Scripts/activate.ps1
-* reload VS Code: code .
+
+## Virtual Environment OS X
+* create environment: python -m venv sshortcut-env
+* activate environment (Terminal): source sshortcut-env/bin/activate
 
 ## Dependencies
 * upgrade pip: python -m pip install --upgrade pip
@@ -17,3 +20,4 @@
 * install dependency: pip install [dependency]
 * save dependencies: pip freeze > requirements.txt
 * install dependencies: pip install -r requirements.txt
+	
