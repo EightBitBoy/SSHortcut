@@ -21,3 +21,5 @@
 * save dependencies: pip freeze > requirements.txt
 * install dependencies: pip install -r requirements.txt
 	
+## Testing
+* python -m unittest
